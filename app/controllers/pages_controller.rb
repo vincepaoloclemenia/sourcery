@@ -4,7 +4,7 @@ class PagesController < ApplicationController
     end
     
     def user_signup
-        @job_seeker = "applicant"
+        @job_seeker = "jobseeker"
         @employer = "employer"
     end
 

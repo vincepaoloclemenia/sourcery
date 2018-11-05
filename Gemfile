@@ -36,6 +36,8 @@ gem 'devise'
 gem 'will_paginate'
 # Friendly ID for decent URL
 gem 'friendly_id', '~> 5.1.0'
+# For Image upload
+gem "paperclip", "~> 4.3"
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password

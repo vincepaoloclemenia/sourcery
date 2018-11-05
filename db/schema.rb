@@ -10,10 +10,59 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181105025536) do
+ActiveRecord::Schema.define(version: 20181105072124) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "addresses", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "street"
+    t.string "city"
+    t.string "country"
+    t.string "zip"
+    t.string "longhitude"
+    t.string "latitude"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_addresses_on_user_id"
+  end
+
+  create_table "clients", force: :cascade do |t|
+    t.string "name"
+    t.string "industry"
+    t.text "profile"
+    t.date "date_established"
+    t.boolean "agency"
+    t.integer "client_id"
+    t.string "avatar_file_name"
+    t.string "avatar_content_type"
+    t.integer "avatar_file_size"
+    t.datetime "avatar_updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "educations", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "school"
+    t.date "from"
+    t.date "to"
+    t.string "course"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_educations_on_user_id"
+  end
+
+  create_table "job_posts", force: :cascade do |t|
+    t.string "title"
+    t.string "industry"
+    t.integer "years_of_exp"
+    t.text "description"
+    t.integer "emp_needed"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -41,4 +90,21 @@ ActiveRecord::Schema.define(version: 20181105025536) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "works", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "position"
+    t.string "company"
+    t.date "from"
+    t.date "to"
+    t.boolean "status"
+    t.text "tasks"
+    t.string "level"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_works_on_user_id"
+  end
+
+  add_foreign_key "addresses", "users"
+  add_foreign_key "educations", "users"
+  add_foreign_key "works", "users"
 end

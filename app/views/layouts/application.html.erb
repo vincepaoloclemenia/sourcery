@@ -9,7 +9,11 @@
   </head>
 
   <body>
-  
+    <% if notice && user_signed_in? %>
+      <%= react_component('NotificationWrapper', { message: notice, type: 'success' }) %>
+    <% elsif alert && user_signed_in? %>
+      <%= react_component('NotificationWrapper', { message: alert, type: 'danger' }) %>
+    <% end %>
     
     <%=  render "layouts/#{user_signed_in? ? 'user_nav' : 'guest_nav'}" %>
     <%= yield %>
