@@ -1,0 +1,64 @@
+ #modal{   
+    h5.modal-title{ float: left }
+
+    .form-control{
+        &.company-input{
+            border-radius: 0;
+        }
+    }
+    
+    label.form-label{
+        font-size: 11px;
+        font-family: 'Noto Sans', sans-serif;
+        color: $font-grey;
+    }
+
+    .modal-footer{
+        &.no-border{
+            padding-top: 20px;
+            border: none;
+        }
+    }
+}
+
+.modal-title-caption{
+    font-family: 'Noto Sans', sans-serif;
+    color: lighten($font-grey, 20%);
+    font-weight: 300;
+    padding: 20px 15px;  
+    width: 100%;  
+    border-bottom: 1px solid grey;
+    margin-bottom: 25px;
+}
+h4.modal-header{
+    color: lighten($font-grey, 15%);
+    padding: 20px 15px;  
+    width: 100%;  
+    border-bottom: 1px solid grey;
+    margin-bottom: 25px;
+}
+.modal-form-container{
+    padding: 0 23px 13px 23px;
+    float: left;
+}
+
+@media (min-width: 650px){
+    .modal-form-container{
+        width: 600px;
+        &.md{
+            width: 500px;
+        }
+        &.sm{
+            width: 400px;
+        }
+        &.xs{
+            width: 300px;
+        }
+
+    }
+}
+
+.custom-modal{
+    max-width: 600px !important;
+    width: 100%;
+}

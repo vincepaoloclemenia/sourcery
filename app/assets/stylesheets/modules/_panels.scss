@@ -1,0 +1,301 @@
+.panel{
+    border: 1px solid lighten(grey, 40%);
+    border-radius: 0px;
+    width: 100%;
+    position: relative;
+    &.pdr25{
+        margin-right: 25px;
+        padding-right: 25px;
+    }    
+    //box-shadow: 3px 3px 3px 3px rgba(0, 82, 97, 0.48);
+    &.with-border{
+        box-shadow: 3px 3px 5px 6px #ccc;
+    }
+
+    &.colored{
+        background-color: lighten($light-blue, 20%)
+    }
+
+    div.centered{
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .panel-heading{
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 15px;
+        padding: 25px;
+        border-bottom: 1px $font-grey;
+        &.ml15 { margin-left: 15px }
+        &.mr15 { margin-right: 15px }
+        &.with-border{
+            border-bottom: 1px solid gray;
+        }
+        h1, h2, h3, h4, h5 { color: grey }
+    }
+    li.user-profile{
+        cursor: pointer;
+        color: grey;
+        font-family: 'Noto Sans', sans-serif;
+        font-weight: 500px;
+        list-style: none;
+        padding: 20px 0 20px 20px;
+        border-bottom: 1px solid lighten(grey, 30%);
+        &:hover{ background-color: lighten($twitter-blue, 50%)}
+    }
+
+    li.polished{
+        color: grey;
+        font-family: 'Noto Sans', sans-serif;
+        font-weight: 500;
+        list-style: none;
+        padding: 20px 0 20px 20px;
+        border-bottom: 1px solid lighten(grey, 30%);
+        ul li { list-style: disc; margin-bottom: 10px; }
+        a { font-size: 13px; color: grey }
+    }
+    label.form-label{ font-size: 12px }
+    label.panel-label{
+        font-family: 'Noto Sans', sans-serif;
+        color: $font-grey;
+        font-size: 13px;
+        font-weight: 900;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        &.pull-right{ float: right }
+        &.pull-left{ float: left; }
+    }
+
+    div.form.pull-right{
+        float: right
+    }
+    div.padded-to-right { padding-left: 25px }
+    .panel-body{
+        &.absolute{ position: absolute; z-index: 999 }
+        &.mt25{ margin-top: 25px }
+        &.mb25{ margin-bottom: 25px }
+        &.mr20{ margin-right: 20px }
+        &.mt15{ margin-top: 15px }
+        &.ml15{ margin-left: 15px }
+        &.ml20{ margin-left: 20px }
+        &.mr15{ margin-right: 15px }
+    }
+
+    div.display{
+        height: 50px;
+        &.hide { visibility: hidden }
+        &.show { visibility: visible }
+    }
+    
+    h3.company-profile, h4.company-profile, h5.company-profile, h2.company-profile { 
+        font-family: 'Open Sans', sans-serif;
+        font-size: 20px;   
+    }
+
+    h6.company-header, h5.company-header, h4.company-header, h3.company-header, h2.company-header, h1.company-header {
+        font-family: 'Patua One', sans-serif;
+        padding-bottom: 20px;
+        color: $main-color;        
+        &.pl20 { padding-left: 20px }
+        &.fs25 { font-size: 25px }
+        &.fs18 { font-size: 18px }
+        &.fs16 { font-size: 16px }
+    }
+    h5.job-header, h5.user-header{
+        cursor: pointer;
+        font-size: 18px;
+        color: $main-color;
+        font-family: 'Patua One', sans-serif;
+        font-weight: 300;        
+        &:hover{ text-decoration: underline }
+    }
+
+    div.company-cover-pad{
+        z-index: 999;
+        max-height: 300px;
+        min-width: 20%;
+        width: 100%;
+        background-color: transparent;
+        padding: 55px 0px 50px 60px;
+        word-wrap: break-word;
+        margin-bottom: 10px;
+        font-size: 12px;
+        font-family: 'Open Sans', sans-serif;        
+    }
+
+    div.company-content{
+        font-family: 'Open Sans', sans-serif;
+        text-align: justify;
+        text-justify: inter-word;
+        font-size: 14px;
+        font-weight: 500;
+        color: grey;
+    }
+
+    img.company-display-picture{
+        position: absolute;
+        height: 130px;
+        width: 130px;
+        border: 3px solid $blue;
+        top: 170px;
+        left: 60px;
+        background: white;
+    }
+    p.company-prof{
+        font-family: 'Open Sans', sans-serif;        
+        font-size: 12px;
+        padding-bottom: 20px;
+        font-weight: 600;
+        word-wrap: break-word;
+    }
+
+    input{
+        &.inputfile, &.image-input{
+            width: 0.1px;
+            height: 0.1px;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+            z-index: -1;
+            + label{
+                padding: 10px 10px;
+                cursor: pointer;
+                font-size: 15px;
+                font-weight: 300;
+                color: white;
+                background-color: $blue;
+                display: inline-block;
+                &:hover, &:focus{
+                    background-color: $main-color;
+                }
+                &:focus{
+                    outline: 1px dotted #000;
+                    outline: -webkit-focus-ring-color auto 5px;
+                }
+            }
+        }
+        
+    }
+
+    input#import{
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+        + label{
+            padding: 10px 10px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 300;
+            color: white;
+            background-color: $blue;
+            display: inline-block;
+            &:hover, &:focus{
+                background-color: $main-color;
+            }
+            &:focus{
+                outline: 1px dotted #000;
+                outline: -webkit-focus-ring-color auto 5px;
+            }
+        }
+    }
+
+    .label-for-preference{
+        font-family: 'Noto Sans', sans-serif;
+        color: lighten($font-grey, 10%);
+        font-weight: 900;
+        padding: 5px 15px;  
+        width: 100%;  
+        margin-bottom: 25px;
+    }
+
+    label.timelog-label{
+        font-family: 'Open Sans', sans-serif;
+        color: lighten($font-grey, 10%);
+        font-weight: 900;
+        padding: 5px 15px;  
+        font-size: 15px;
+        width: 100%;  
+    }
+
+    p.timelog-detail{
+        font-family: 'Noto Sans', sans-serif;
+        color: lighten($font-grey, 10%);
+        font-weight: 900;
+        padding: 5px 15px; 
+        font-size: 13px; 
+        width: 100%;  
+        margin-bottom: 15px;
+    }
+
+    p{
+        &.job-title{ font-weight: bold }
+
+        &.panel-par{
+            font-size: 13px;
+            font-family: 'Noto Sans', sans-serif;
+        }
+        
+    }
+
+    p.job-par, p.user-par{
+        font-family: 'Noto Sans', sans-serif;
+        font-weight: 500px;
+        color: grey;
+        font-size: 11px;
+        &.pull-right{ align-content: right }
+    }
+
+    div.pull-left{ float: left }
+
+    li.list-item, div.preference{
+        margin-left: 20px;
+        font-weight: 200;
+        font-size: 13px;
+        font-family: 'Noto Sans', sans-serif;
+        color: grey;        
+    }
+    div.preference{ margin-left: 40px }
+    
+    li.skill-item{
+        font-size: 15px;
+    }
+
+    div.candidate-profile{
+        h5 { 
+            font-family: 'Noto Sans', sans-serif; 
+            color: $main-color;
+            font-weight: 900;
+            font-size: 17px;
+            span{
+                color: grey;
+                font-size: 11px;
+                .pull-right{ float: right }
+            }
+        }
+        p {
+            color: darken(grey, 15%);
+            font-family: 'Open Sans', sans-serif;   
+            font-size: 11px;
+        }
+
+        li {
+            list-style: disc;
+            color: darken(grey, 15%);
+            font-family: 'Open Sans', sans-serif;   
+            font-size: 11px;
+            span { font-size: 11px }
+        }
+    }
+    ul.buttons{
+        li {
+            list-style: none;
+            display: inline;
+            color: darken(grey, 10%);
+        }
+    }
+
+    span.pull-right{ float: right !important }
+}

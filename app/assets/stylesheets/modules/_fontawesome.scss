@@ -1,0 +1,28 @@
+i.fa, i.far, i.fas{
+    &.with-color{
+        color: lighten($blue, 5%);
+    }
+    &.color-green{
+        color: rgba(99, 205, 50, 0.62);
+    }
+    &.color-red{ color: tomato }
+    span{
+        font-family: 'Noto Sans', sans-serif;
+        font-weight: bold;
+        padding-left: 0.5em;
+        font-size: 12px;
+    }
+    &.pink { color: #FF5D7B }
+    &.pr1{ margin-right: 1em }
+    &.white{ color: #fff }
+}
+
+p.user-name{
+    letter-spacing: 0.1em;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    color: gray;
+}
+
+i.null{ color: gray }

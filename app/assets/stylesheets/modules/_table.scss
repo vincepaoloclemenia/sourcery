@@ -1,0 +1,120 @@
+table {
+    border-collapse: collapse;
+    max-height: 500px;
+    overflow: auto;
+    th { 
+        font-family: 'Noto Sans', sans-serif;
+        background: $main-color; 
+        color: white; 
+        font-size: 12px;
+        text-align: center;
+    }
+    tr.table-header{
+        height: 40px;
+    }
+    a {
+        cursor: pointer;
+        &:hover{
+            text-decoration: none;
+            color: $main-color;
+        }
+    }
+    tr.company-row{
+        padding: 5px;
+        &:hover{
+        background-color: lighten($light-blue, 20%);
+        color: $main-color;       
+        }
+    }
+
+    tr.table-row{
+        cursor: pointer;
+        height: 80px;
+        &:hover, &.clicked{
+            background-color: lighten($main-color, 40%);
+            td, a { color: white }      
+        }
+        td.table-data{
+            vertical-align: middle;
+            font-family: 'Noto Sans', sans-serif;
+            font-weight: 600;
+        }
+    }
+    tr#clicked{
+        background-color: lighten($main-color, 40%);
+        td, a { color: white }   
+    }
+
+    th.table-head{
+        vertical-align: middle;
+        font-family: 'Noto Sans', sans-serif;
+        font-weight: 800;
+        font-size: 14px;
+    }
+
+    td { 
+        color: $main-color;
+        text-align: center; 
+        font-size: 13px;
+        padding: 15px 0px;
+        
+        .larger-fonts:not(#stay-left){
+            vertical-align: center;
+            font-size: 12px;
+            font-family: 'Noto Sans', sans-serif;
+        }
+    }
+
+    td#stay-left{
+        text-align: left;
+        padding-left: 20px
+    }
+
+    tr.tall-height{
+        padding: 50px 5px;
+    }
+}
+ul li{
+    list-style: none;
+    a.see-more-table{
+        cursor: pointer;		
+        margin-left: 40%;
+        font-weight: 900;
+        color: $main-color;
+        text-decoration: none;
+    }
+
+} 
+
+table#timelog, table#timesheet{
+    td {
+        text-justify: justify;
+        background-color: lighten($light-blue, 20%);
+        padding: 20px 5px;
+        font-size: 11px;
+        &.timelog-date{
+            text-align: left;
+        }
+        border-color: grey;
+    }
+
+    th {
+        padding: 20px 5px;
+    }
+
+    th.row-header{
+        padding: 20px 10px;
+    }
+
+    tr.weekend{
+        border-color: grey;
+        td { background: lighten(grey, 35%) }
+    }
+
+    th { border-color: grey }
+
+    input#master-checker{
+       background-color: transparent;
+    }
+
+}

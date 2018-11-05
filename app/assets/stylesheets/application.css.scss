@@ -1,0 +1,40 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+
+ @import url(http://fonts.googleapis.com/css?family=Lora|Ubuntu|Noto+Sans|Ubuntu|Vollkorn+SC|Work+Sans|Open+Sans|Patua+One|Francois+One);
+ @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+ @import "partials/variables";
+ @import "partials/keyframes";
+ @import "partials/mixins";
+ @import "modules/body";
+ @import "modules/navbar";
+ @import "modules/panels";
+ @import "modules/forms";
+ @import "modules/paddings";
+ @import "modules/buttons";
+ @import "modules/sidebar";
+ @import "modules/alert";
+ @import "modules/table";
+ @import "modules/modal";
+ @import "modules/avatar";
+ @import "modules/fontawesome";
+ @import "modules/profile";
+ @import "modules/image";
+ @import "modules/searchbar";
+ @import "modules/jobs";
+ @import "modules/tabs";
+ @import "modules/applicants_panel";
+ @import "modules/user_profile"

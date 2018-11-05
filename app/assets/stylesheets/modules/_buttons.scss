@@ -1,0 +1,265 @@
+.actions{
+    padding-top: 15px;
+    padding-bottom: 15px;    
+    .signup-btn{
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .btn-signup, .btn-login{
+        background-color: $main-color; 
+        width: 100%;
+        &:hover{
+            background-color: lighten($main-color, 10%);
+            transition: 0.5s;
+        }
+
+        height: 50px;
+    }
+}
+
+.btn.btn-primary{
+    &.inline{ display: inline-block }
+    &.pull-right{        
+        float: right !important;
+        position: normal;       
+    }
+    &.download{
+        position: relative;
+        font-size: 12px;
+        background-color: transparent; 
+        width: 100%;
+        color: $main-color;
+        &:hover{
+            background-color: lighten($main-color, 10%);
+            color: $white;
+            transition: 0.5s;
+        }
+    }
+    &.reset{
+        position: relative;
+        font-size: 12px;
+        background-color: transparent; 
+        width: 100%;
+        color: tomato;
+        border-color: tomato;
+        &:hover{
+            background-color: lighten(tomato, 10%);
+            color: $white;
+            transition: 0.5s;
+        }
+    }
+    &.mr2{ margin-right: 2em }
+    &.mb2{ margin-bottom: 2em }
+    &.company-edit{
+        position: relative;
+        font-size: 14px;
+        background-color: transparent; 
+        width: 100%;
+        color: $main-color;
+        &:hover{
+            background-color: lighten($main-color, 10%);
+            color: $white;
+            transition: 0.5s;
+        }
+        height: 40px;
+        margin-right: 20px;
+    }
+    &.company-overview{
+        position: relative;
+        font-size: 11px;
+        background-color: transparent; 
+        width: 150px;
+        color: $main-color;
+        &:hover{
+            background-color: lighten($main-color, 10%);
+            color: $white;
+            transition: 0.5s;
+        }
+        height: 40px;
+    }
+    &.view-timelog{
+        position: relative;
+        font-size: 11px;
+        background-color: transparent; 
+        width: 120px;
+        color: $main-color;
+        &:hover{
+            background-color: lighten($main-color, 10%);
+            color: $white;
+            transition: 0.5s;
+        }
+        padding: 5px;
+    }
+    &.apply{
+        font-family: 'Noto Sans', sans-serif;        
+        position: relative;
+        font-weight: 500;
+        font-size: 13px;
+        background-color: $blue; 
+        width: 140px;
+        color: white;
+        border: none;
+        &:hover{           
+            background-color: lighten($blue, 20%);
+            transition: 0.5s;            
+        }
+        height: 40px;
+        &.w120{ width: 120px }
+    }
+    &.unsave{
+        font-weight: 500;
+        font-family: 'Noto Sans', sans-serif;        
+        position: relative;
+        font-size: 13px;
+        background-color: transparent; 
+        width: 140px;
+        color: darken(grey, 20%);
+        border: solid 1px darken(grey, 20%);
+        &:hover{
+            &:hover{
+                border: solid 1px darken(grey, 20%);
+                background-color: darken(grey, 20%);
+                transition: 0.5s;
+                color: white;
+            }
+        }
+        height: 40px;
+        &.w120{ width: 120px }
+    }
+    &.save{
+        font-weight: 500;
+        font-family: 'Noto Sans', sans-serif;        
+        position: relative;
+        font-size: 13px;
+        background-color: transparent; 
+        width: 140px;
+        color: darken(grey, 20%);
+        border: solid 1px darken(grey, 20%);
+        &:hover{
+            &:hover{
+                border: solid 1px #FF5D7B;
+                background-color: #FF5D7B;
+                transition: 0.5s;
+                color: white;
+            }
+        }
+        height: 40px;
+    }
+
+    &.btn35{ height: 35px }
+    &.table-btn, &.modal-btn, &.add_fields {
+        font-size: 11px;
+        font-family: 'Noto Sans', sans-serif;
+        background-color: $blue;
+        &:hover{
+            background-color: $main-color;
+            transition: 0.5s;
+        }
+    }
+
+    &.inline { display: inline-block }
+
+    &.cancel{
+        background-color: transparent; 
+        width: 100%;
+        color: tomato;
+        border: 1px solid tomato;
+        &:hover{
+            background-color: lighten(tomato, 10%);
+            transition: 0.5s;
+            color: white;
+        }
+
+        height: 50px;
+    }
+
+    &.close{
+        background-color: transparent;
+        color: grey;
+        border: none;
+        &:hover{ color: black }
+    }
+
+    &.remove-resume{
+        padding: 10px 10px;
+        font-size: 15px;
+    }
+    &.rounded{
+        border-radius: 50%;
+        border: none;
+        color: $main-color;
+        background-color: transparent;
+    }
+    &.transparent{
+        border: none;
+        color: $main-color;
+        font-size: 11px;
+        font-family: 'Noto Sans', sans-serif;
+        background-color: transparent;
+        &:hover{
+            color: $white;
+            background-color: $blue;
+            transition: 0.5s;
+        }
+    }
+    &.translucent{
+        border: none;
+        color: grey;
+        font-size: 11px;
+        font-family: 'Noto Sans', sans-serif;
+        background-color: transparent;
+        &:hover{ color: $blue }
+        &.clicked{ color: $main-color }
+    }
+    &.modal-cancel{
+        font-size: 11px;
+        font-family: 'Noto Sans', sans-serif;
+        background-color: transparent;
+        border: none;
+        color: tomato;
+        &:hover {
+            background-color: tomato;
+            color: $white;
+            transition: 0.5s;
+        }
+    }
+    &.update-timelogs{
+        font-size: 11px;
+        font-family: 'Noto Sans', sans-serif;
+        background-color: transparent;
+        border: 1px solid $blue;
+        color: $main-color;
+        &:hover {
+            background-color: $blue;
+            color: $white;
+            transition: 0.5s;
+        }
+    }
+    &.full-width{
+        font-size: 15px;
+        width: 100%;
+        left: -5px;
+        right: -5px;
+        bottom: -5px; 
+        height: 40px;
+    }
+    &.rel-width{
+        font-size: 13px;
+        padding: 10px 30px;
+    }
+    &.hide { visibility: hidden }
+}
+span.action-gap{
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.remove_fields{
+    font-size: 11px;
+    font-family: 'Noto Sans', sans-serif;
+    background-color: transparent;
+    border: none;
+    color: tomato;
+    float: right;
+}
