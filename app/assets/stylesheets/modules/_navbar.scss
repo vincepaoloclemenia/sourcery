@@ -1,70 +1,64 @@
 .navbar {
-    z-index: 999;
-    position: fixed;
-    height: 60px;
-    width: 100%;
-    background-color: white;
-    .navbar-brand {
-        margin-right: 25px !important;
-        display: block;
+    //	height: 75px;
+        width: 100%;
+        font-family: 'Ubuntu', sans-serif;
+        //text-transform: uppercase;
+        position: fixed;
+        top: 0;
+        z-index: 999;
     }
-}
-
-.navbar-collapse {
-    .navbar-right { 
-        background-color: $white;         
+    
+    .navbar-collapse {
+        background-color: #002435;
     }
-    .navbar-nav > li > a {   
-        color: $main-color;
-    }
-}
-
-.dropdown-menu{
-    &.with-timelog{
-        height: 800px;
-        width: 250px;
-        li.dropdownlink{
-            text-align: center;
-            height: 30px;
+    
+    .navbar-default {
+        background-color: #002435;
+        padding-bottom: 5px;
+        padding-top: 5px;
+    
+        .navbar-toggle {
+            background-color: #002435;
         }
-        a { 
-            padding: 10px 0
-        }
-    }
-    &.time-in{
-        width: 250px;
-        li.timesheet-link { height: 40px; text-align: center; padding: 15px 10px }
-    }
-
-}
-
-.navbar-default{
-
-    .navbar-nav > li > a {   
-        &:hover {
-            color: darken($light-blue, 5%);
-            transition: 0.5s;
-        }
-    }
-
-    .navbar-header {
-        
-        .navbar-brand {
-            vertical-align: middle;
-            letter-spacing: 1.4px;
-            font-weight: 500;
+    
+        .navbar-nav > li > a {
+            color: #ffff;
+            &:hover {
+                color: lighten(#002435, 35%);
+                background-color: transparent;
+                transition: 0.5s;
+            }
         }
         
-    }
-
-    .dropdown-menu > li > a:hover {
-		background-color: darken($light-blue, 5%);
-        color: $white;
-	}
-
-	.navbar-nav > .open > a, .navbar-nav > .open > a:hover, .navbar-nav > .open > a:focus {
-		background-color: darken($light-blue, 5%);
-		color: $white;	
-	}
-
+        .navbar-header {
+    
+            .navbar-brand {
+                vertical-align: middle;
+                color: #ffff;
+                letter-spacing: 1.4px;
+                font-weight: 500;
+            }
+    
+        }
+    
+        .dropdown-menu > li:hover {
+            background-color: lighten(#002435, 35%);
+            color: #002435;
+        }
+    
+        .dropdown-menu{
+            background-color: lighten(#002435, 35%);
+            color: #ffff;
+            border: none;
+            li a:hover{
+                background-color: lighten(#002435, 25%);
+                color: #ffff;
+            }
+        }
+    
+        .navbar-nav > .open > a, .navbar-nav > .open > a:hover, .navbar-nav > .open > a:focus {
+            background-color: lighten(#002435, 35%);
+            color: #F3FFFE;	
+        }
+    
 }

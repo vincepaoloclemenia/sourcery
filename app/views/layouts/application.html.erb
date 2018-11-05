@@ -9,6 +9,11 @@
   </head>
 
   <body>
+  
+    
+    <%=  render "layouts/#{user_signed_in? ? 'user_nav' : 'guest_nav'}" %>
     <%= yield %>
+    
+    
   </body>
 </html>
