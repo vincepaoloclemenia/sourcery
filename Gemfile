@@ -14,17 +14,28 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+# Bootstrap
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-
+# For front end stuff ReactJS
+gem 'react-rails'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
+# Jquery
+gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+# Devise for Users
+gem 'devise'
+# Pagination of records
+gem 'will_paginate'
+# Friendly ID for decent URL
+gem 'friendly_id', '~> 5.1.0'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
