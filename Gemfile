@@ -38,6 +38,8 @@ gem 'will_paginate'
 gem 'friendly_id', '~> 5.1.0'
 # For Image upload
 gem "paperclip", "~> 4.3"
+# For user privilege restriction
+gem 'cancancan', '~> 2.0'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
