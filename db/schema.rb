@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181105072124) do
+ActiveRecord::Schema.define(version: 20181107093118) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,6 +54,33 @@ ActiveRecord::Schema.define(version: 20181105072124) do
     t.index ["user_id"], name: "index_educations_on_user_id"
   end
 
+  create_table "employments", force: :cascade do |t|
+    t.string "type"
+    t.string "date_employed"
+    t.bigint "client_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["client_id"], name: "index_employments_on_client_id"
+    t.index ["user_id"], name: "index_employments_on_user_id"
+  end
+
+  create_table "inquiries", force: :cascade do |t|
+    t.string "company_name"
+    t.string "address"
+    t.string "industry"
+    t.string "company_function"
+    t.string "email"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "position"
+    t.string "company_size"
+    t.string "info_from"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "contact_number"
+  end
+
   create_table "job_posts", force: :cascade do |t|
     t.string "title"
     t.string "industry"
@@ -62,6 +89,32 @@ ActiveRecord::Schema.define(version: 20181105072124) do
     t.integer "emp_needed"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "timelogs", force: :cascade do |t|
+    t.bigint "user_id"
+    t.datetime "login"
+    t.date "date"
+    t.datetime "logout"
+    t.datetime "break_out"
+    t.datetime "break_in"
+    t.decimal "overtime"
+    t.bigint "client_id"
+    t.decimal "undertime"
+    t.datetime "overtime_in"
+    t.decimal "total_break_hours"
+    t.decimal "total_hours"
+    t.datetime "overtime_out"
+    t.boolean "is_holiday"
+    t.decimal "total_pay"
+    t.string "valid_ot"
+    t.string "shift"
+    t.decimal "overtime_pay"
+    t.decimal "gross_pay"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["client_id"], name: "index_timelogs_on_client_id"
+    t.index ["user_id"], name: "index_timelogs_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -106,5 +159,9 @@ ActiveRecord::Schema.define(version: 20181105072124) do
 
   add_foreign_key "addresses", "users"
   add_foreign_key "educations", "users"
+  add_foreign_key "employments", "clients"
+  add_foreign_key "employments", "users"
+  add_foreign_key "timelogs", "clients"
+  add_foreign_key "timelogs", "users"
   add_foreign_key "works", "users"
 end

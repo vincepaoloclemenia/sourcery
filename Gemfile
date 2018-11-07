@@ -33,13 +33,15 @@ gem 'jbuilder', '~> 2.5'
 # Devise for Users
 gem 'devise'
 # Pagination of records
-gem 'will_paginate'
+# gem 'will_paginate'
 # Friendly ID for decent URL
 gem 'friendly_id', '~> 5.1.0'
 # For Image upload
 gem "paperclip", "~> 4.3"
 # For user privilege restriction
 gem 'cancancan', '~> 2.0'
+# Rails Admin
+gem 'rails_admin', '~> 1.3'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password

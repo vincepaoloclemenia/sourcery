@@ -3,6 +3,11 @@ class Ability
 
   def initialize(user)
     # Define abilities for the passed in user here. For example:
+    alias_action :create, :read, :update, :destroy, to: :crud
+    if user.admin?
+      can :crud, :all
+      can :access, :rails_admin
+    end    
     #
     #   user ||= User.new # guest user (not logged in)
     #   if user.admin?

@@ -13,22 +13,22 @@
     }
     
     .navbar-collapse {
-        background-color: #002435;
+        background-color: #1D343D;
     }
     
     .navbar-default {
-        background-color: #002435;
+        background-color: #1D343D;
         padding-bottom: 5px;
         padding-top: 5px;
     
         .navbar-toggle {
-            background-color: #002435;
+            background-color: #1D343D;
         }
     
         .navbar-nav > li > a {
             color: #ffff;
             &:hover {
-                color: lighten(#002435, 35%);
+                color: lighten(#1D343D, 35%);
                 background-color: transparent;
                 transition: 0.5s;
             }
@@ -46,22 +46,22 @@
         }
     
         .dropdown-menu > li:hover {
-            background-color: lighten(#002435, 35%);
-            color: #002435;
+            background-color: lighten(#1D343D, 35%);
+            color: #1D343D;
         }
     
         .dropdown-menu{
-            background-color: lighten(#002435, 35%);
+            background-color: lighten(#1D343D, 35%);
             color: #ffff;
             border: none;
             li a:hover{
-                background-color: lighten(#002435, 25%);
+                background-color: lighten(#1D343D, 25%);
                 color: #ffff;
             }
         }
     
         .navbar-nav > .open > a, .navbar-nav > .open > a:hover, .navbar-nav > .open > a:focus {
-            background-color: lighten(#002435, 35%);
+            background-color: lighten(#1D343D, 35%);
             color: #F3FFFE;	
         }
     

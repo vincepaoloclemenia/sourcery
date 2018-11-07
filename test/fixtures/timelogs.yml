@@ -1,0 +1,43 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  login: 2018-11-07 17:31:18
+  date: 2018-11-07
+  logout: 2018-11-07 17:31:18
+  break_out: 2018-11-07 17:31:18
+  break_in: 2018-11-07 17:31:18
+  overtime: 9.99
+  client: one
+  undertime: 9.99
+  overtime_in: 2018-11-07 17:31:18
+  total_break_hours: 9.99
+  total_hours: 9.99
+  overtime_out: 2018-11-07 17:31:18
+  is_holiday: false
+  total_pay: 9.99
+  valid_ot: MyString
+  shift: MyString
+  overtime_pay: 9.99
+  gross_pay: 9.99
+
+two:
+  user: two
+  login: 2018-11-07 17:31:18
+  date: 2018-11-07
+  logout: 2018-11-07 17:31:18
+  break_out: 2018-11-07 17:31:18
+  break_in: 2018-11-07 17:31:18
+  overtime: 9.99
+  client: two
+  undertime: 9.99
+  overtime_in: 2018-11-07 17:31:18
+  total_break_hours: 9.99
+  total_hours: 9.99
+  overtime_out: 2018-11-07 17:31:18
+  is_holiday: false
+  total_pay: 9.99
+  valid_ot: MyString
+  shift: MyString
+  overtime_pay: 9.99
+  gross_pay: 9.99

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  date_employed: MyString
+  client: one
+
+two:
+  type: 
+  date_employed: MyString
+  client: two
