@@ -13,4 +13,16 @@ class User < ApplicationRecord
   def admin?
     role == "admin"
   end
+
+  def jobseeker?
+    role == "jobseeker"
+  end
+
+  def finance_admin?
+    role == "finance_admin"
+  end
+
+  def recruiter?
+    role == "recruiter"
+  end
 end

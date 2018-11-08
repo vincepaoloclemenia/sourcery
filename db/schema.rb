@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181107093118) do
+ActiveRecord::Schema.define(version: 20181108035740) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,15 @@ ActiveRecord::Schema.define(version: 20181107093118) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_addresses_on_user_id"
+  end
+
+  create_table "agency_client_relationships", force: :cascade do |t|
+    t.integer "agency_id"
+    t.bigint "active_client_id"
+    t.date "transaction_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["active_client_id"], name: "index_agency_client_relationships_on_active_client_id"
   end
 
   create_table "clients", force: :cascade do |t|
@@ -55,12 +64,12 @@ ActiveRecord::Schema.define(version: 20181107093118) do
   end
 
   create_table "employments", force: :cascade do |t|
-    t.string "type"
-    t.string "date_employed"
+    t.string "employment_type"
     t.bigint "client_id"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.date "employment_date"
     t.index ["client_id"], name: "index_employments_on_client_id"
     t.index ["user_id"], name: "index_employments_on_user_id"
   end
@@ -158,6 +167,7 @@ ActiveRecord::Schema.define(version: 20181107093118) do
   end
 
   add_foreign_key "addresses", "users"
+  add_foreign_key "agency_client_relationships", "clients", column: "active_client_id"
   add_foreign_key "educations", "users"
   add_foreign_key "employments", "clients"
   add_foreign_key "employments", "users"
