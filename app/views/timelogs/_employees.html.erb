@@ -1,0 +1,15 @@
+<ul id="employees" class="employees-list grid">
+    <% employees.map do |emp| %>
+        <li class"lixs lism limd lilg">
+            <div class='row mb15 mt25'>
+                <center><%= avatar_for(emp, size: 70)%></center>
+            </div>
+            <div class='row'>
+                <center><h5><%= emp.full_name %></h5></center>
+            </div>
+            <div class='row'>
+                <center><span style='font-size: 12px;'><%= emp.employment.employment_type %></span></center>
+            </div>
+        </li>
+    <% end %>
+</ul>

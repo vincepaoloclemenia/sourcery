@@ -7,6 +7,8 @@ class Ability
     if user.admin?
       can :crud, :all
       can :access, :rails_admin
+    elsif user.finance_admin?
+      can :crud, Timelog
     end    
     #
     #   user ||= User.new # guest user (not logged in)

@@ -1,0 +1,9 @@
+<div class="notifier">    
+    <div id="react">
+        <% if notice %>
+            <%= react_component('NotificationWrapper', { message: notice, type: 'success' }) %>
+        <% elsif alert %>
+            <%= react_component('NotificationWrapper', { message: alert, type: 'danger' }) %>
+        <% end %>
+    </div>
+</div> 

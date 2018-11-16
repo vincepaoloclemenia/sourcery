@@ -1,0 +1,17 @@
+
+<div class="panel-body">
+    <div class="row mb20 mt20">
+        <div class="col-xs-12">
+            <center>
+                <%= link_to "Add new employee", new_timelog_path(option: "new"), class: "btn btn-primary add-new", remote: true %>
+            </center>
+        </div>
+    </div>
+    <div class="row mb20">
+        <div class="col-xs-12">
+            <center>
+                <%= link_to "Add using an exisiting account?", new_timelog_path(option: "existing"), class: "btn btn-primary cancel", remote: true %>
+            </center>
+        </div>
+    </div>
+</div>

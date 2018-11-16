@@ -1,0 +1,37 @@
+ul.employees-list{
+    list-style: none;
+     li {
+        font-family: "Lucida Grande", arial, helvetica, sans-serif;
+        float: left;
+        height: 250px;
+        border: 1px dotted #CCC; 
+        padding: 20px;
+        //width: 25%;
+    }
+    @media (min-width: 768px) {
+        li { width: 100% }
+    }
+    @media (min-width: 420px ) {
+        li { width: 100% }
+    }
+    @media (min-width: 861px) {
+        li { width: 50% }
+    }
+    @media (min-width: 540px ) {
+        li { width: 50% }
+    }
+    @media (min-width: 992px) {
+        li { width: 33.33% }
+    }
+
+    @media (min-width: 640px ) {
+        li { width: 33.33% }
+    }
+    @media (min-width: 1200px) {    
+        li { width: 25% }
+    }
+    @media (min-width: 1300px) {    
+        li { width: 20% }
+    }
+}
+

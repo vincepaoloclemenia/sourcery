@@ -19,8 +19,13 @@
  @import "partials/variables";
  @import "partials/keyframes";
  @import "partials/mixins";
+ @import "modules/elements";
+ @import "modules/employees";
  @import "modules/body";
+ @import "modules/datepicker";
  @import "modules/navbar";
+ @import "modules/chosen";
+ @import "modules/modal";
  @import "modules/panels";
  @import "modules/forms";
  @import "modules/paddings";
@@ -28,7 +33,6 @@
  @import "modules/sidebar";
  @import "modules/alert";
  @import "modules/table";
- @import "modules/modal";
  @import "modules/avatar";
  @import "modules/fontawesome";
  @import "modules/profile";

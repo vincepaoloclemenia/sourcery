@@ -4,20 +4,17 @@
     <title>Sourcery</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
   </head>
 
-  <body>
-    <% if notice && user_signed_in? %>
-      <%= react_component('NotificationWrapper', { message: notice, type: 'success' }) %>
-    <% elsif alert && user_signed_in? %>
-      <%= react_component('NotificationWrapper', { message: alert, type: 'danger' }) %>
-    <% end %>
+  <body class="<%= controller.controller_name %> <%= controller.action_name %><%= user_signed_in? ? '' : ' guest'%>">
+    <%#= render "partials/flash" if flash %>
     
     <%=  render "layouts/#{user_signed_in? ? 'user_nav' : 'guest_nav'}" %>
-    <%= yield %>
-    
+    <div class="<%= user_signed_in? ? 'container' : '' %> mt80">
+      <%= yield %>
+    </div>
     
   </body>
 </html>

@@ -37,7 +37,7 @@ gem 'devise'
 # Friendly ID for decent URL
 gem 'friendly_id', '~> 5.1.0'
 # For Image upload
-gem "paperclip", "~> 4.3"
+gem "paperclip", "~> 6.0.0"
 # For user privilege restriction
 gem 'cancancan', '~> 2.0'
 # Rails Admin

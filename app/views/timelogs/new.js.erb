@@ -1,0 +1,11 @@
+$('#modal h5').html('New Employee');
+<% if @option.present? %>
+    $('.modal-body').html('<%= j render partial: "form", locals: { option: @option, choices: @choices, employee: @employee, employment: @employment } %>');
+<% else %>
+    $('.modal-body').html('<%= j render partial: "choices", locals: { choices: @choices } %>');
+<% end %>
+$('#modal').modal("show");
+
+$('.chosen').chosen({
+	width: "100%"
+});

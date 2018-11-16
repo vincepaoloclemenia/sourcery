@@ -8,8 +8,12 @@
         z-index: 999;
     }
 
-    .navbar-right {
-        li { font-size: 12px }
+    .navbar-right {    
+        li { font-size: 12px; 
+            &.current-link{
+                border-bottom: 5px solid lighten(#1D343D, 35%);             
+            }
+        }
     }
     
     .navbar-collapse {

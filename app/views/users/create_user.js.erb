@@ -1,0 +1,15 @@
+<% flash.each do |key, value| %>
+    <% message = key == "notice" || key == "success" ? "success" : "error" %> 
+    <% if message == "success" %>
+        $.notify("<%= value %>", "<%= message %>", { globalPosition: "top center" } );
+        $('#modal').modal('hide');
+        $("#employees").html("<%= j render partial: 'timelogs/employees', locals: { employees: @employees } %>")
+    <% else %>
+        <% value.each do |k, v| %>
+            var m = "<%= k.to_s.gsub(/_/, ' ').capitalize! %> <%= v.to_s %>"
+                
+            $(".validate_" + "<%= k %>").notify(m, "<%= message %>", { globalPosition: "top center" } );
+        <% end %>
+    <% end %>
+<% end %>
+

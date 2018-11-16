@@ -1,8 +1,19 @@
 class PagesController < ApplicationController
+    before_action :authenticate_user!, only: [:dashboard, :notifications]
     def index
-        if current_user && current_user.admin?
-            redirect_to "/admin"
+        if current_user 
+            if current_user.admin?
+                redirect_to "/admin"
+            else
+                redirect_to dashboard_path
+            end
         end
+    end
+
+    def dashboard
+    end
+
+    def notifications
     end
     
     def user_signup

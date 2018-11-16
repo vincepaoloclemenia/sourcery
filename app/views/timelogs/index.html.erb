@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-xs-12 col-sm-3">
+        <div class="panel">
+            <div class="panel-heading">Quick Links</div>
+            <div class="panel-body">
+            </div>
+
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-9">
+        <div class="panel">
+            <div class="panel-heading">Employees
+                <div class="pull-right">
+                    <%= link_to "Add new employee", new_timelog_path, class: "btn btn-primary view-timelog", remote: true %>
+                </div>
+            </div>
+            <div class="panel-body">
+                <% if @employees.empty? %>
+                    <center><i>No employees yet</i></center>
+                <% else %>
+                    <%= render partial: "employees", locals: { employees: @employees } %>
+                <% end %>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<%= render "partials/modal" %>
