@@ -39,8 +39,11 @@
                                 
             <div class="modal-footer no-border">
                 <span class="inline float-right">
-                    <%= link_to "Back", new_timelog_path, class: "btn btn-primary modal-cancel", remote: true %>
-                    
+                    <% if employee.new_record? %>
+                        <%= link_to "Back", new_timelog_path, class: "btn btn-primary modal-cancel", remote: true %>
+                    <% else %>
+                        <%= link_to "Cancel", '#', class: "btn btn-primary modal-cancel", data: {dismiss: "modal"} %>
+                    <% end %>
                     <%= f.submit "Save", class: "btn btn-primary table-btn", id: 'add' %>
                 </span>
             </div>

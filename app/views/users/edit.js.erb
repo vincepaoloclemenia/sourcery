@@ -1,0 +1,9 @@
+$('#modal h5').html('Edit: <%= @employee.full_name %>');
+
+$('.modal-body').html('<%= j render partial: "form", locals: { option: "new", choices: @choices, employee: @employee, employment: @employment } %>');
+
+$('#modal').modal("show");
+
+$('.chosen').chosen({
+	width: "100%"
+});

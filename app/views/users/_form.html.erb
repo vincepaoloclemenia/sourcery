@@ -1,0 +1,55 @@
+<div class="panel-body">
+    <%= form_for employee, remote: true do |f| %>
+        <%= f.hidden_field :role, value: "employee" %>
+        <div class="row mb15">
+            <div class="col-xs-12 col-md-6">
+                <%= f.label :first_name %>
+                <%= f.text_field :first_name, class: "form-control validate_first_name", placeholder: "First name" %>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <%= f.label :last_name %>
+                <%= f.text_field :last_name, class: "form-control validate_last_name", placeholder: "Last name" %>
+            </div>
+        </div>
+        <div class="row mb15">
+            <div class="col-xs-12">
+                <%= f.label :email %>
+                <%= f.email_field :email, class: "form-control validate_email", placeholder: "Last name" %>
+            </div>
+        </div>
+        <%= f.fields_for :employment, employment do |b| %>
+            <%= b.hidden_field :client_id, value: current_client.id %>
+            <div class="row mb15">
+                <div class="col-xs-12 col-md-6">
+                    <%= b.label :employment_type %>
+                    <%= b.select :employment_type, choices, { include_blank: true, placeholder: "Select employment type" }, class: "chosen" %>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <%= b.label :employment_date %>
+                    <div class="input-group date" data-provide="datepicker">
+                        <%= b.text_field :employment_date, class: "form-control validate_employment_date", id: "employment-date", value: employment.employment_date.strftime("%m/%d/%Y") %>
+                        <div class="input-group-addon">
+                            <span class="glyphicon glyphicon-th"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+                            
+        <div class="modal-footer no-border">
+            <span class="inline float-right">
+                <%= link_to "Cancel", '#', class: "btn btn-primary modal-cancel", data: {dismiss: "modal"} %>     
+                <%= f.submit "Save", class: "btn btn-primary table-btn", id: 'add' %>
+            </span>
+        </div>
+    <% end %>
+</div>
+
+
+<script type="text/javascript">
+    $('#employment-date').datepicker({
+		autoclose: true,
+		minDate: new Date(),
+        format: "dd/mm/yyyy"
+	})
+</script>

@@ -1,4 +1,4 @@
-ul.employees-list{
+ul.employees-list:not(.buttons){
     list-style: none;
      li {
         font-family: "Lucida Grande", arial, helvetica, sans-serif;

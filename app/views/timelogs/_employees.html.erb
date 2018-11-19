@@ -1,6 +1,6 @@
 <ul id="employees" class="employees-list grid">
     <% employees.map do |emp| %>
-        <li class"lixs lism limd lilg">
+        <li id="user_<%= emp.id %>" class"lixs lism limd lilg">
             <div class='row mb15 mt25'>
                 <center><%= avatar_for(emp, size: 70)%></center>
             </div>
@@ -10,6 +10,11 @@
             <div class='row'>
                 <center><span style='font-size: 12px;'><%= emp.employment.employment_type %></span></center>
             </div>
+            
+                
+            <center><%= link_to "<i class='fa fa-pencil fa-lg' aria-hidden='true'></i>".html_safe, edit_user_path(emp), class: "btn btn-primary translucent rounded", remote: true %></center>
+                
+            
         </li>
     <% end %>
 </ul>
